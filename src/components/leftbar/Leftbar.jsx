@@ -1,6 +1,8 @@
 import React from "react";
 import "./leftbar.css"
 import { RssFeed, Chat, PlayCircle, Group, Bookmark, QuestionMark, Work, EventSeat, School } from "@mui/icons-material";
+import { Users } from "../../dummyData";
+import CloseFriend from "../closefriend/CloseFriend";
 
 export default function Leftbar(){
     return(
@@ -47,62 +49,9 @@ export default function Leftbar(){
                 <button className="leftbarButton"> Show more! </button>
                 <hr className="leftbarline"/>
                 <ul className="leftbarFriendList">
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className="leftbarFriendImg" src="/assets/people/2.jpeg" alt="" />
-                        <span className="leftbarFriendName">Franky</span>
-                    </li>
+                    {Users.map((u) => (
+                        <CloseFriend key={u.id} user={u} />
+                    ))}
                 </ul>
             </div>
         </div>
