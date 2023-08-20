@@ -13,9 +13,17 @@
     flex: 3;
 }
 
+.logout{
+    margin-left: 10px;
+}
+
+.underline{
+    text-decoration: none;
+}
+
 .logo{
     font-size: 24px;
-    margin-left: 20px;
+    margin-left: 50px;
     font-weight: bold;
     color: aliceblue;
     cursor: pointer;

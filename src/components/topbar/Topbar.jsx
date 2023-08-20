@@ -1,12 +1,20 @@
 import React from "react"
 import "./topbar.css"
 import { Search, Person, Chat, Notifications } from "@mui/icons-material"
+import { UserButton } from "@clerk/clerk-react";
+
 
 export default function Topbar(){
     return(
         <div className="TopbarContainer">
+            <div className="logout">
+                <UserButton />
+            </div>
+
             <div className="topbarLeft">
-                <span className="logo">Konnect</span>
+            <a href="/" className="underline">
+            <span className="logo">Konnect</span>
+            </a>
             </div>
             <div className="topbarCenter">
                 <div className="searchbar">
@@ -33,7 +41,9 @@ export default function Topbar(){
                         <span className="topbarIconBadge">1</span>
                     </div>
                 </div>
-                <img src="/assets/people/1.jpeg" alt="" className="topbarImg" />
+                <a href="/profile">
+                    <img src="/assets/people/1.jpeg" alt="" className="topbarImg"/>
+                </a>
             </div>
         </div>
     )
